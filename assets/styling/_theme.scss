@@ -1,0 +1,865 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+
+/* --------------- Common CSS Start --------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: 'Cabin', sans-serif;
+    background: rgba($skyblue, .1);
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $skyblue;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+    background-color: $skyblue;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $dark-yellow;
+}
+
+.positionstatic {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1194px;
+}
+
+.row {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h85 {
+    height: 87px;
+}
+
+.p11 {
+    padding-top: 11px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.spacing {
+    padding: 75px 0;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    margin-bottom: -7px;
+}
+
+h2 {
+    font-size: rem(30px);
+    color: $white;
+    margin-bottom: rem(30px);
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: calc(50% - #{rem(25px)});
+        bottom: rem(-20px);
+        width: rem(50px);
+        height: rem(5px);
+        background: $skyblue;
+    }
+}
+
+
+/* --------------- Common CSS End --------------- */
+
+
+/* --------------- Owl Carousal Start --------------- */
+
+// .owl-slider {
+//     width: 100%;
+//     overflow-x: hidden;
+//     position: relative;
+// }
+// .owl-slider .owl-stage {
+//     display: flex;
+// }
+// .owl-slider .slide img {
+//     width: 100%;
+// }
+// .owl-slider .disabled {
+//     display: none;
+// }
+// .owl-slide {
+//     background-image: url('https://images.unsplash.com/photo-1532446646217-e12aaeda0bc9?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: 0 30%;
+//     height: 475px;
+// }
+// .owl-text {
+//     height: 475px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+// }
+// .owl-text span {
+//     color: #000;
+//     font-size: 44px;
+//     line-height: 50px;
+//     text-transform: uppercase;
+//     font-weight: 400;
+//     margin-top: -32px;
+// }
+// .owl-text button {
+//     background-color: transparent;
+//     border: 3px solid #afb1b4;
+//     border-radius: 6px;
+//     font-size: 30px;
+//     padding: 6px 48px;
+//     cursor: pointer;
+//     margin-top: 88px;
+//     color: #e4e4e4;
+// }
+// .owl-text button:hover {
+//     color: #fff;
+//     border: 3px solid #fff;
+// }
+// .owl-dots {
+//     text-align: center;
+//     position: absolute;
+//     bottom: 25px;
+//     width: 100%;
+//     left: 2px;
+// }
+// .owl-dots .owl-dot {
+//     width: 8px;
+//     height: 8px;
+//     border-radius: 50%;
+//     margin: 0 6px;
+//     padding: 0;
+//     cursor: pointer;
+//     border-color: transparent;
+//     background-color: #fff;
+// }
+// .owl-dots .owl-dot.active {
+//     background-color: #69728c;
+//     outline: 0;
+// }
+
+/* --------------- Owl Carousal End home sllider --------------- */
+
+
+/* --------------- Content Section Start --------------- */
+
+.content-wrap .title {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #4c505d;
+    font-size: 30px;
+    line-height: 49px;
+}
+
+.content-wrap .sub-title {
+    max-width: 880px;
+    line-height: 21px;
+    margin: 0 auto;
+    margin-top: 26px;
+}
+
+.icon-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 46%;
+    margin: 0 auto;
+    margin-top: 67px;
+}
+
+.icon-wrap .icon img {
+    width: 55px;
+}
+
+
+/* --------------- Content Section Start --------------- */
+
+
+/* --------------- Footer Start --------------- */
+
+footer {
+    background-color: #00d089;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-size: rem(14px);
+    margin-bottom: rem(0px);
+}
+
+
+/* --------------- Footer End --------------- */
+
+
+/* --------------- Responsive CSS Starts --------------- */
+
+
+/* --------------- For Tablet --------------- */
+
+@media (max-width: 1024px) {
+    .container {
+        width: 99%;
+    }
+    .icon-wrap {
+        width: 55%;
+    }
+}
+
+
+/* --------------- For Tablet --------------- */
+
+
+/* --------------- For Small Tablet --------------- */
+
+@media (max-width: 768px) {
+    /* --------------- Responsive navigation Starts --------------- */
+    #header .container {
+        width: 100%;
+        padding: 0px 15px;
+    }
+    .d-sm-none {
+        display: none !important;
+    }
+    #nav {
+        width: 100%;
+        top: 85px;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        height: 0;
+    }
+    #nav.responsive-nav {
+        height: 165px;
+    }
+    #nav.responsive-nav ul {
+        height: 165px;
+        overflow: hidden;
+        transition: height 0.25s ease-in;
+    }
+    #nav:before {
+        content: "";
+        // background-image: url("../images/nav-icon.png");
+        position: absolute;
+        right: 9px;
+        top: -54px;
+        width: 33px;
+        height: 28px;
+        cursor: pointer;
+        margin-right: 20px;
+        background-repeat: no-repeat;
+    }
+    #nav ul {
+        display: flex;
+        flex-direction: column;
+        background: #222;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.25s ease-in;
+    }
+    #nav ul li a {
+        padding: 10px 3%;
+        line-height: 20px;
+        width: 100%;
+        border-top: 1px solid #333;
+    }
+    #nav ul li a:hover,
+    #nav ul li a.active {
+        color: #fff;
+        background-color: #4b94a1;
+    }
+    .content-wrap .sub-title {
+        max-width: 679px;
+        line-height: 22px;
+        margin-top: 25px;
+    }
+    .icon-wrap {
+        width: 73%;
+        margin-top: 44px;
+    }
+    /* --------------- Responsive navigation Ends --------------- */
+}
+
+
+/* --------------- For Small Tablet --------------- */
+
+
+/* --------------- For Smartphone --------------- */
+
+@media (max-width: 640px) {
+    #header .container {
+        width: 100%;
+        padding: 0;
+    }
+    .spacing {
+        padding: 40px 0 35px 0;
+    }
+    #nav:before {
+        content: "";
+        right: 0;
+    }
+    /* --------------- Responsive Owl Carousal Starts --------------- */
+    .owl-slide {
+        height: 336px;
+        background-position: 0 100%;
+    }
+    .owl-text {
+        height: 336px;
+    }
+    .owl-text span {
+        color: #e4e4e4;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .owl-text button {
+        margin-top: 59px;
+    }
+    /* --------------- Responsive Owl Carousal Ends --------------- */
+    /* --------------- Responsive Content Wrap Start --------------- */
+    .content-wrap .title {
+        font-size: 24px;
+        line-height: 30px;
+        max-width: 485px;
+    }
+    .owl-text span {
+        margin-top: -36px;
+    }
+    .content-wrap .sub-title {
+        max-width: 550px;
+        margin-top: 47px;
+    }
+    .icon-wrap {
+        width: 88%;
+        margin-top: 57px;
+    }
+    /* --------------- Responsive Content Wrap End --------------- */
+}
+
+
+/* --------------- For Smartphone --------------- */
+
+
+/* --------------- Responsive CSS Ends --------------- */
+
+// product start
+.testimonials {
+    background-color: #f33f02;
+    position: relative;
+    padding-top: 80px;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 30%;
+        background-color: #ddd;
+    }
+    .item-details {
+        background-color: #333333;
+        color: #fff;
+        padding: 20px 10px;
+        text-align: left;
+        h5 {
+            margin: 0 0 15px;
+            font-size: 18px;
+            line-height: 18px;
+            span {
+                color: red;
+                float: right;
+                padding-right: 20px;
+            }
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    .item {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: rem(10px);
+    }
+    .owl-carousel {
+        position: relative;
+        .owl-next,
+        .owl-prev {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 30%;
+            font-size: rem(30px);
+            color: #fff;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .owl-next {
+            right: -70px;
+        }
+        .owl-prev {
+            left: -70px;
+        }
+        .owl-nav [class*='owl-'] {
+            @include flexbox;
+            @include align-items($value: center);
+            @include justify-content($value: center);
+            margin: rem(0px);
+            padding: rem(0px);
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+            &.disabled:hover {
+                background-color: #D6D6D6;
+            }
+        }
+        // dots
+        .owl-dots {
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
+            margin-bottom: rem(30px);
+            .owl-dot {
+                display: inline-block;
+                zoom: 1;
+                *display: inline;
+                span {
+                    // width: $dot-width;
+                    // height: $dot-height;
+                    // margin: $dot-margin;
+                    // background: $dot-background;
+                    display: block;
+                    // border-radius: $dot-rounded;
+                }
+                &.active // &:hover 
+                {
+                    span {
+                        width: rem(30px);
+                        height: rem(10px);
+                        // background: $dot-background-active;
+                        border-radius: rem(10px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// product end
+// client review start
+@import 'clientreview';
+// client review End
+// single product start
+@import 'singleproduct';
+// single product end
+.slide-left {
+    animation: 3s slide-left;
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+// close button
+
+/* Close Button */
+
+.popup-close {
+    width: 30px;
+    height: 30px;
+    // padding-top: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transition: ease 0.25s all;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    border-radius: 1000px;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: Arial, Sans-Serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    &:hover {
+        -webkit-transform: translate(50%, -50%) rotate(180deg);
+        transform: translate(50%, -50%) rotate(180deg);
+        background: rgba(0, 0, 0, 1);
+        text-decoration: none;
+    }
+}
+
+// backup
+
+/*
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover {
+    opacity: 0.8;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  .terminal {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+  }
+
+  .terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 0;
+    padding: 14px 0;
+    text-indent: 4px;
+  }
+
+  .terminal pre {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+  }
+
+  .circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+  .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  }
+
+  .github-star-badge:hover {
+    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+    border-color: rgba(27,31,35,.35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+
+
+  //Responsive Styles 
+  @media screen and (max-width: 767px) {
+
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+</style>
+*/
+
+// loader
+.loader {
+    @include flexbox;
+    @include flex-direction($direction: row);
+    @include justify-content($value: center !important);
+    padding: rem(30px) rem(0px);
+    .shapes-5 {
+        width: rem(40px);
+        height: rem(40px);
+        color: $dark-yellow;
+        background: linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0);
+        background-size: 21px 21px;
+        background-repeat: no-repeat;
+        animation: sh5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+    }
+    @keyframes sh5 {
+        0% {
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%
+        }
+        33% {
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+            width: 60px;
+            height: 60px
+        }
+        66% {
+            background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+            width: 60px;
+            height: 60px
+        }
+        100% {
+            background-position: 100% 0, 100% 100%, 0 100%, 0 0
+        }
+    }
+}
